@@ -1,0 +1,12 @@
+{
+	"setup" : {
+		"dbType" : "d3",
+        "dbBinary" : "/usr/bin/d3",
+        "dbUser" : "RDMWEB",
+		"dbAccount" : "DBNAME",
+        "dbPassword" : "INFINITY",
+        "dbVM" : "pick0"
+
+
+	}
+}

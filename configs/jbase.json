@@ -1,0 +1,36 @@
+{
+	"setup" : {
+		"dbType" : "jBase",
+        "dbBinary" : "/opt/jbase/CurrentVersion/bin/jsh",
+        "dbUser" : "rdmuser",
+        "dbPassword" : "rdmpassword",
+        "dbVM" : "",
+		"serviceCWS" : "/dbms/DBACCOUNTPATH",
+		"env" :{
+			"HOME" : "/dbms/DBACCOUNTPATH",
+			"JBASE_DATABASE" : "default",
+			"JBCDEV_BIN" : "/dbms/DBACCOUNTPATH/bin",
+			"JBCDEV_LIB" : "/dbms/DBACCOUNTPATH/lib",
+			"JBCEMULATE" : "jbased3",
+			"JBCGLOBALDIR" : "/opt/jbase/CurrentVersion",
+			"JBCLOGNAME" : "DBACCOUNTPATH",
+			"JBCLOGINPROG" : "'jsh -'",
+			"JBCOBJECTLIST" : "/dbms/DBACCOUNTPATH/lib:/dbms/lib:/dbms/ACCUTERM/lib",
+			"JBCRELEASEDIR" : "/opt/jbase/CurrentVersion",
+			"JEDIFILENAME_MD" : "/dbms/DBACCOUNTPATH/MD",
+			"JEDIFILEPATH" : ".:/dbms/ACCUTERM",
+			"PATH" : "PATH=/dbms/DBACCOUNTPATH/bin:/dbms/MIS/bin:/dbms/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/jbase/CurrentVersion/bin",
+            "JEDIFILENAME_SYSTEM" : "/dbms/SYSTEM",
+            "LD_LIBRARY_PATH" : "/opt/jbase/CurrentVersion/lib",
+            "JEDIENABLEQ2Q" : "1",
+            "JBASE_ERRMSG_ZERO_USED" : "1",
+			"JBASE_ERRMSG_NON_NUMERIC" : "1",
+			"JBASE_ERRMSG_DIVIDE_ZERO" : "1",
+			"JBCSPOOLERDIR" : "/dbms/jspooler"
+		}
+
+
+
+	}
+}
+
