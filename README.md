@@ -14,7 +14,7 @@ This will install the needed packages and code to support rdmBuild.
 
 When complete run the following to lauch the service. Use tools like "forever" or "qckwinsvc" to run the program in the backgroud to respond to calls.
 
-> node riWweb2.js
+> node riWweb.js
 
 ### Configure the service entry point for your system
 
