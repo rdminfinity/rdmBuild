@@ -8,7 +8,7 @@ The current build supports Linux, AIX, and Windows
 
 Copy the project into your desired directory. 
 
-> npm -i  
+> npm install  
 
 This will install the needed packages and code to support rdmBuild.
 
