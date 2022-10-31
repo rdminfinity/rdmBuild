@@ -29,7 +29,7 @@ rdm.json:
 		"dbType" : "d3",
                 "dbBinary" : "/usr/bin/d3",
                 "dbUser" : "RDMWEB",
-		"dbAccount" : "RDM",
+		 "dbAccount" : "RDM",
                 "dbPassword" : "INFINITY",
                 "dbVM" : "pick0"
 		}
