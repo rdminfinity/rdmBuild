@@ -27,11 +27,11 @@ rdm.json:
 	{
 	"setup" : {
 		"dbType" : "d3",
-        "dbBinary" : "/usr/bin/d3",
-        "dbUser" : "RDMWEB",
+                "dbBinary" : "/usr/bin/d3",
+                "dbUser" : "RDMWEB",
 		"dbAccount" : "RDM",
-        "dbPassword" : "INFINITY",
-        "dbVM" : "pick0"
+                "dbPassword" : "INFINITY",
+                "dbVM" : "pick0"
 		}
 	}
 
@@ -82,7 +82,7 @@ Copy the install script inside of the mvCode into your favorite terminal emulato
 	END
 	XML = '<success>':VAR:'</success>'
 	*or
-	JSON = '{"success":"':VAR:'"}"
+	JSON = '{"success":"':VAR:'"}'
 	*
 	*PASS THE XML OR JSON HERE TO SEND IT BACK IF USING THE HELPER FUNCTION
 	CALL RDM.SEND.DATA(XML,"")
