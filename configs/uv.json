@@ -1,0 +1,16 @@
+{
+	"setup" : {
+		"dbType" : "uv",
+        "dbBinary" : "/usr/bin/uv",
+        "dbUser" : "rdmuser",
+        "dbPassword" : "rdmpassword",
+        "dbVM" : "",
+		"serviceCWS" : "/dbms/DBACCOUNTPATH",
+		"env" :{
+		}
+
+
+
+	}
+}
+
