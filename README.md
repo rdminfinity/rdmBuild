@@ -6,7 +6,7 @@ The current build supports Linux, AIX, and Windows
 
 ### Install Steps
 
-Install NodeJS and NPM to your system.
+Install NodeJS and NPM to your Multivalue system.
 
 Copy the project into your desired directory. 
 
@@ -100,11 +100,11 @@ Using a tool such as Postman (https://www.getpostman.com/) or a web browser hit 
 
 GET version:
 
-http://localhost:9191/service_name/XML.TEST.CONNCTION/?var=MV%20is%20cool
+http://YOUR_MULTIVALUE_SERVER:9191/service_name/XML.TEST.CONNCTION/?var=MV%20is%20cool
 
 POST version:
 
-POST http://localhost:9191/service_name/XML.TEST.CONNECTION
+POST http://YOUR_MULTIVALUE_SERVER:9191/service_name/XML.TEST.CONNECTION
 
 var=MV%20is%20cool
 
