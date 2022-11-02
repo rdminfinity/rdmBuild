@@ -6,7 +6,7 @@ The current build supports Linux, AIX, and Windows
 
 ### Install Steps
 
-Install NodeJS and NPM to you system.
+Install NodeJS and NPM to your system.
 
 Copy the project into your desired directory. 
 
