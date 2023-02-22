@@ -141,18 +141,17 @@ app.use("/:service/:programName/:format?/:debug?",(req,res,next) => {
         case "d3Win":
           //for d3Win use the dbUser as the DB account name
           var child = spawn(serviceConfig.setup.dbBinary, 
-            ["-n",
-              serviceConfig.setup.dbVM,
-              "-r",
-              "-d",
-              "\"\\f"+serviceConfig.setup.dbUser+"\\r"+serviceConfig.setup.dbPassword+"\\r"+req.params.programName.toUpperCase()+"\ "+req.rawQuery+"\\rexit\\r\"",
-              "-dcdon",
-              "-s"],
+            ["-d",
+            serviceConfig.setup.dbAccount,
+            "-c",
+            "\""+req.params.programName.toUpperCase()+"\ "+req.rawQuery+"\"",
+            ],
             {
               encoding : 'utf8',
               shell: true,
               env: process.env,
-              timeout: 10000
+              timeout: 10000,
+			        windowsHide:true
           });
           break;
           case "qm":
