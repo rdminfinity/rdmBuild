@@ -1,0 +1,12 @@
+{
+	"setup" : {
+		"dbType" : "d3Win",
+		"serviceLogName" : "",
+		"serviceLogging" : false,
+    "dbBinary" : "\"c:\\Program Files\\RocketSoftware\\D3\\D3Programs\\d3tcl.exe\"",
+    "dbUser" : "configured_user_name",
+		"dbAccount" : "account_name_for_code",
+    "dbPassword" : "configured_password",
+    "dbVM" : "pick0"
+	}
+}
