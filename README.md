@@ -14,7 +14,7 @@ Copy the project into your desired directory.
 
 This will install the needed packages and code to support rdmBuild.
 
-When complete run the following to lauch the service. Use tools like "forever" or "qckwinsvc" to run the program in the backgroud to respond to calls.
+When complete run the following to lauch the service. Use tools like "[pm2](https://github.com/Unitech/pm2)" or "[qckwinsvc](https://github.com/tallesl/qckwinsvc)" to run the program in the backgroud to respond to calls.
 
 > node riWweb.js
 
@@ -51,7 +51,7 @@ Copy the install script inside of the mvCode into your favorite terminal emulato
  - FORMAT.ERROR
   - A routine that accepts a MV array of error messages that will format them in JSON or XML based on the options passed
   
-- Compile and catalog the above routines
+- **Compile and catalog the above routines**
  
 ## Sample MultiValue code to parse incoming variables and return a response
 
