@@ -22,7 +22,7 @@ When complete run the following to lauch the service. Use tools like "[pm2](http
 
 Create the service to control the MV database specifics for your enviroment. Note that you will need to match up your jBase enviroment paths to the correct env variables in jBase setups.
 
-#### D3 Sample (other samples in the "configs" folder for jBase, QM, etc...)
+#### D3 Sample (other samples in the "configs" folder for jBase, QM, etc...). **UPDATE WITH VARIABLES FOR YOUR SPECIFIC ENVIRONMENT**
 
 rdm.json:
 
@@ -31,7 +31,7 @@ rdm.json:
 		"dbType" : "d3",
                 "dbBinary" : "/usr/bin/d3",
                 "dbUser" : "RDMWEB",
-		 "dbAccount" : "RDM",
+		"dbAccount" : "RDM",
                 "dbPassword" : "INFINITY",
                 "dbVM" : "pick0"
 		}
