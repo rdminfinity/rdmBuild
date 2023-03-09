@@ -201,7 +201,13 @@ app.use("/:service/:programName/:format?/:debug?",(req,res,next) => {
         res.write(output);
       }
     });
-    
+    //Update for certain systems to disconnect on exit vs close
+    child.on('exit', (data) => {
+       console.log("!!!!!exit!!!!!");
+       console.log(data);
+       res.end();
+    });
+
     child.on('close', (code) => {
       // console.log(`child process exited with code ${code}`);
       console.log("Closing:");
