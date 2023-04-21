@@ -11,13 +11,14 @@ Revisions:
 //the web server component for routing and the static file handler
 const express = require("express");
 var serveStatic = require('serve-static')
+var queue = require('express-queue');
 const bodyParser = require('body-parser');
 const url = require('url');
 const path = require('path');
 //template engine
-var pug = require('pug');
+// var pug = require('pug');
 //http request handler for pulling in data
-const axios = require('axios');
+// const axios = require('axios');
 //child processor handling
 const { spawn } = require('child_process');
 //file pluging to get the config files
@@ -28,7 +29,7 @@ var util = require('util');
 /*Set up the Express server to do the heavy lifing for the HTTP stuff*/
 var app = express();
 app.set('x-powered-by', false);
-app.set('x-powered-by', "RDM Infinity rdmBuild Connect - v2.0");
+app.set('x-powered-by', "RDM Infinity rdmBuild - v2.1");
 app.use(bodyParser.raw({ inflate: true, type: '*/*' }));
 //status monitor
 app.use(require('express-status-monitor')({title:"RDM Infinity - Connection Monitor"}));
@@ -48,6 +49,15 @@ catch(e)
   return false;
 }
 
+//add queuing option for pending queue
+if(serverConfig.server.queuing == "true")
+{
+  app.use(queue({
+       activeLimit: serverConfig.server.activeQueueLength,
+       queuedLimit: serverConfig.server.queuedLimit,
+       rejectHandler: (req, res) => { res.sendStatus(500); }
+       }));
+}
 /*LEAVE THESE 2 lines alone (or at least in this order) or you can't get the POST body*/
 //app.use(express.text());
 app.use("/asset",express.static("asset"));
@@ -118,6 +128,18 @@ app.use("/:service/:programName/:format?/:debug?",(req,res,next) => {
                 timeout: 10000
             });
     break;
+    //Brandon - 1/16/22
+    //Added for compatibility with \f not suppressing echo in normal d3 command
+    case "d3tcl":
+      var child = spawn(serviceConfig.setup.dbBinary,
+                  ['"'+req.params.programName.toUpperCase()+"\ "+req.rawQuery+'"'],{
+                encoding : 'utf8',
+                shell: true,
+                env : serviceConfig.setup.env,
+                timeout: 10000
+            });
+//       console.log(child);
+      break;
     case "jBase":
       var child = spawn(serviceConfig.setup.dbBinary, 
                   ["-",
