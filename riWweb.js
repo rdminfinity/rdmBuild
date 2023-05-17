@@ -101,6 +101,8 @@ app.use("/:service/:programName/:format?/:debug?",(req,res,next) => {
     //console.log(serviceConfig.toString());
   }catch(e){
     console.log("Cannot find "+service+" config!!!")
+    //RDM - Updated to output any try/catch errors also
+    console.log(e);
     res.status(500);
     res.end("Service Configuration ERROR")
   }
